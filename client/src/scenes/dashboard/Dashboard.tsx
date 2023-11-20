@@ -1,3 +1,4 @@
+import DashboardBox from "@/components/DashboardBox";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 
 type Props = {};
@@ -61,27 +62,27 @@ const Dashboard = (props: Props) => {
       sx={
         isAboveMediumScreens
           ? {
-              gridTemplateColumns: "repeat(3, minmax(370px, 1fr))",
-              gridTemplateRows: "repeat(10, minmax(60px, 1fr))",
+              gridTemplateColumns: "repeat(3, minmax(20rem, 1fr))",
+              gridTemplateRows: "repeat(10, minmax(3.5rem, 1fr))",
               gridTemplateAreas: gridTemplateLarge,
             }
           : {
               gridTemplateAreas: gridTemplateSmall,
               gridAutoColumns: "1fr",
-              gridAutoRows: "80px",
+              gridAutoRows: "5rem",
             }
       }
     >
-      <Box gridArea="a" bgcolor="#000"></Box>
-      <Box gridArea="b" bgcolor="#000"></Box>
-      <Box gridArea="c" bgcolor="#000"></Box>
-      <Box gridArea="d" bgcolor="#000"></Box>
-      <Box gridArea="e" bgcolor="#000"></Box>
-      <Box gridArea="f" bgcolor="#000"></Box>
-      <Box gridArea="g" bgcolor="#000"></Box>
-      <Box gridArea="h" bgcolor="#000"></Box>
-      <Box gridArea="i" bgcolor="#000"></Box>
-      <Box gridArea="j" bgcolor="#000"></Box>
+      <DashboardBox gridArea="a"></DashboardBox>
+      <DashboardBox gridArea="b"></DashboardBox>
+      <DashboardBox gridArea="c"></DashboardBox>
+      <DashboardBox gridArea="d"></DashboardBox>
+      <DashboardBox gridArea="e"></DashboardBox>
+      <DashboardBox gridArea="f"></DashboardBox>
+      <DashboardBox gridArea="g"></DashboardBox>
+      <DashboardBox gridArea="h"></DashboardBox>
+      <DashboardBox gridArea="i"></DashboardBox>
+      <DashboardBox gridArea="j"></DashboardBox>
     </Box>
   );
 };
